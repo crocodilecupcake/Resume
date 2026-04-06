@@ -1,0 +1,89 @@
+role,skills
+Data Scientist,python|machine learning|statistics|pandas|numpy
+Data Analyst,excel|sql|power bi|python|data visualization
+Machine Learning Engineer,python|ml|scikit-learn|tensorflow|pytorch
+AI Engineer,python|deep learning|nlp|tensorflow|pytorch
+Business Analyst,excel|sql|communication|data analysis|reporting
+Web Developer,html|css|javascript|react|bootstrap
+Frontend Developer,html|css|javascript|react|vue
+Backend Developer,python|django|flask|sql|api
+Full Stack Developer,html|css|javascript|python|sql
+Software Engineer,java|python|data structures|algorithms|oop
+Software Developer,c++|java|python|debugging|problem solving
+Mobile App Developer,java|kotlin|android|firebase|ui design
+Android Developer,kotlin|java|android sdk|firebase|rest api
+iOS Developer,swift|ios|xcode|ui kit|api
+Game Developer,c++|unity|unreal engine|game design|physics
+DevOps Engineer,docker|kubernetes|aws|ci/cd|linux
+Cloud Engineer,aws|azure|gcp|networking|virtualization
+Cloud Architect,aws|cloud design|security|scalability|architecture
+Cyber Security Analyst,network security|ethical hacking|firewalls|cryptography|siem
+Ethical Hacker,penetration testing|network security|kali linux|exploits|vulnerability
+Network Engineer,networking|routers|switches|tcp/ip|firewalls
+System Administrator,linux|windows server|networking|security|backup
+Database Administrator,sql|oracle|mysql|performance tuning|backup
+UI Designer,figma|ui design|wireframing|prototyping|design systems
+UX Designer,user research|wireframing|prototyping|usability testing|figma
+Product Manager,product strategy|roadmap|agile|communication|analytics
+Project Manager,agile|scrum|planning|risk management|leadership
+QA Engineer,testing|manual testing|automation|selenium|bug tracking
+Automation Tester,selenium|python|testng|automation|ci/cd
+Blockchain Developer,blockchain|solidity|ethereum|smart contracts|web3
+AR/VR Developer,unity|c#|3d modeling|vr|ar
+Embedded Systems Engineer,c|c++|microcontrollers|iot|electronics
+IoT Developer,embedded systems|sensors|raspberry pi|arduino|iot
+Data Engineer,python|sql|etl|hadoop|spark
+Big Data Engineer,hadoop|spark|scala|data pipelines|hdfs
+Site Reliability Engineer,linux|monitoring|automation|cloud|scripting
+Technical Support Engineer,troubleshooting|networking|hardware|software|support
+IT Support Specialist,windows|networking|troubleshooting|hardware|helpdesk
+Penetration Tester,security testing|network security|ethical hacking|tools|reporting
+Security Engineer,network security|encryption|firewalls|risk assessment|monitoring
+Cloud Security Engineer,cloud security|aws|encryption|iam|risk management
+AI Researcher,python|deep learning|research|nlp|computer vision
+Computer Vision Engineer,opencv|python|deep learning|image processing|cnn
+NLP Engineer,python|nlp|transformers|text processing|ml
+Robotics Engineer,robotics|control systems|python|ros|automation
+Firmware Engineer,c|embedded|microcontrollers|debugging|electronics
+Graphics Programmer,opengl|directx|c++|rendering|shaders
+Bioinformatics Engineer,biology|python|data analysis|genomics|algorithms
+SAP Consultant,sap|erp|business process|configuration|consulting
+Salesforce Developer,salesforce|apex|crm|integration|automation
+Digital Marketing Specialist,seo|sem|content marketing|analytics|social media
+SEO Specialist,seo|keyword research|google analytics|backlinks|optimization
+Content Writer,writing|seo|research|editing|blogging
+Technical Writer,documentation|writing|technical skills|editing|api docs
+HR Tech Specialist,hr systems|recruitment|analytics|communication|tools
+Data Visualization Specialist,tableau|power bi|data visualization|dashboards|analytics
+Game Tester,testing|gameplay|bug reporting|qa|automation
+IT Auditor,audit|compliance|risk|it controls|security
+Systems Analyst,analysis|requirements|system design|documentation|communication
+Solutions Architect,architecture|cloud|integration|design|scalability
+Integration Engineer,api|integration|middleware|data flow|debugging
+CRM Developer,crm|salesforce|automation|integration|database
+ERP Developer,erp|sap|oracle|integration|business logic
+E-commerce Developer,shopify|woocommerce|payment gateway|frontend|backend
+WordPress Developer,wordpress|php|themes|plugins|seo
+PHP Developer,php|mysql|laravel|api|backend
+Java Developer,java|spring|hibernate|api|backend
+Python Developer,python|django|flask|api|backend
+C++ Developer,c++|oop|stl|algorithms|debugging
+Go Developer,go|microservices|api|concurrency|backend
+Rust Developer,rust|systems programming|memory safety|performance|backend
+Scala Developer,scala|spark|functional programming|big data|backend
+Kotlin Developer,kotlin|android|backend|coroutines|api
+Swift Developer,swift|ios|xcode|ui|api
+Flutter Developer,flutter|dart|mobile|ui|firebase
+React Developer,react|javascript|redux|frontend|api
+Angular Developer,angular|typescript|frontend|api|web
+Vue Developer,vue|javascript|frontend|state management|api
+SRE Engineer,monitoring|automation|cloud|linux|scripting
+MLOps Engineer,mlops|deployment|docker|kubernetes|ci/cd
+Data Architect,data modeling|database design|etl|architecture|sql
+Information Security Analyst,security|risk|compliance|monitoring|analysis
+Forensic Analyst,digital forensics|security|investigation|tools|reporting
+Help Desk Technician,technical support|hardware|software|networking|customer service
+Cloud Consultant,cloud|aws|azure|consulting|migration
+IT Consultant,it strategy|consulting|systems|analysis|planning
+AI Product Manager,ai|product management|ml|strategy|analytics
+Growth Hacker,marketing|analytics|experimentation|seo|data
