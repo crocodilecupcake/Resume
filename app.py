@@ -3,7 +3,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from shared_css import SHARED_CSS
 
-st.set_page_config(page_title="AI Resume System", page_icon="🚀", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="AI Resume System", page_icon="✨", layout="wide", initial_sidebar_state="collapsed")
 
 st.markdown(SHARED_CSS, unsafe_allow_html=True)
 
