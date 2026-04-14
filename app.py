@@ -3,7 +3,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from shared_css import SHARED_CSS
 
-st.set_page_config(page_title="AI Resume System", page_icon="✨", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="AI Resume System", page_icon="🚀", layout="wide", initial_sidebar_state="collapsed")
 
 st.markdown(SHARED_CSS, unsafe_allow_html=True)
 
@@ -142,7 +142,7 @@ with c2:
     st.markdown("""
     <div class="module-card card-m2">
         <div class="module-num">MODULE 02</div>
-        <span class="module-icon">🤖</span>
+        <span class="module-icon">🧠</span>
         <div class="module-title">AI Screening</div>
         <div class="module-desc">Upload any resume and get a score, ATS check, skill extraction, and 5 improvement tips.</div>
         <ul class="module-features">
