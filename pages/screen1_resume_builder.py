@@ -824,13 +824,7 @@ with right:
 
     def make_pdf_creative_sidebar():
         """Two-column PDF: dark left sidebar + white right content."""
-        from reportlab.platypus import Table, TableStyle
         buf = io.BytesIO()
-        doc = SimpleDocTemplate(
-            buf, pagesize=A4,
-            leftMargin=0, rightMargin=0,
-            topMargin=0, bottomMargin=0
-        )
 
         PURPLE     = colors.HexColor('#6c63ff')
         DARK_NAVY  = colors.HexColor('#1a1a2e')
@@ -967,43 +961,46 @@ with right:
             for c in st.session_state.certifications:
                 main_items.append(Paragraph(f'• <b>{c["name"]}</b>  ({c["type"]})', s_body_m))
 
-        # Render each column into a frame-based table
-        from reportlab.platypus import Frame, PageTemplate, BaseDocTemplate
-        from reportlab.platypus import FrameBreak
+        # Use Frame-based two-column layout to avoid LayoutError from
+        # fixed rowHeights exceeding the available page frame.
+        from reportlab.platypus import Frame, PageTemplate, BaseDocTemplate, FrameBreak
 
-        # Use Table for two-column layout
-        from reportlab.platypus import KeepInFrame
+        USABLE_H = PAGE_H  # margins are 0
 
-        sidebar_frame = KeepInFrame(
-            SIDE_W - 2*PAD, PAGE_H - 2*PAD,
-            sidebar_items,
-            mode='shrink'
+        sidebar_frame_obj = Frame(
+            0, 0, SIDE_W, USABLE_H,
+            leftPadding=PAD, rightPadding=PAD,
+            topPadding=PAD, bottomPadding=PAD,
+            id='sidebar'
         )
-        main_frame = KeepInFrame(
-            MAIN_W - 2*PAD, PAGE_H - 2*PAD,
-            main_items,
-            mode='shrink'
+        main_frame_obj = Frame(
+            SIDE_W, 0, MAIN_W, USABLE_H,
+            leftPadding=PAD, rightPadding=PAD,
+            topPadding=PAD, bottomPadding=PAD,
+            id='main'
         )
 
-        table_data = [[sidebar_frame, main_frame]]
-        table = Table(
-            table_data,
-            colWidths=[SIDE_W, MAIN_W],
-            rowHeights=[PAGE_H]
-        )
-        table.setStyle(TableStyle([
-            ('BACKGROUND', (0, 0), (0, 0), DARK_NAVY),
-            ('BACKGROUND', (1, 0), (1, 0), colors.white),
-            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-            ('LEFTPADDING',  (0, 0), (0, 0), PAD),
-            ('RIGHTPADDING', (0, 0), (0, 0), PAD),
-            ('LEFTPADDING',  (1, 0), (1, 0), PAD),
-            ('RIGHTPADDING', (1, 0), (1, 0), PAD),
-            ('TOPPADDING',   (0, 0), (-1, -1), 0),
-            ('BOTTOMPADDING',(0, 0), (-1, -1), 0),
-        ]))
+        def draw_sidebar_bg(canvas, document):
+            canvas.saveState()
+            canvas.setFillColor(DARK_NAVY)
+            canvas.rect(0, 0, SIDE_W, PAGE_H, fill=1, stroke=0)
+            canvas.restoreState()
 
-        doc.build([table])
+        page_tpl = PageTemplate(
+            id='two_col',
+            frames=[sidebar_frame_obj, main_frame_obj],
+            onPage=draw_sidebar_bg
+        )
+
+        base_doc = BaseDocTemplate(
+            buf, pagesize=A4,
+            leftMargin=0, rightMargin=0,
+            topMargin=0, bottomMargin=0
+        )
+        base_doc.addPageTemplates([page_tpl])
+
+        story_combined = sidebar_items + [FrameBreak()] + main_items
+        base_doc.build(story_combined)
         buf.seek(0)
         return buf.getvalue()
 
