@@ -3,7 +3,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from shared_css import SHARED_CSS
 
-st.set_page_config(page_title="AI Resume System", page_icon="🚀", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="AI Resume System", page_icon="📰", layout="wide", initial_sidebar_state="collapsed")
 
 st.markdown(SHARED_CSS, unsafe_allow_html=True)
 
@@ -98,7 +98,7 @@ st.markdown("""
 st.markdown("""
 <div class="hero">
     <div class="hero-badge">✦ Free · No API · No Cost</div>
-    <div class="hero-title">Your AI-Powered<br><span>Resume & Career</span><br>Command Center</div>
+    <div class="hero-title">AI Resume<br><span>Screening & Job</span><br>Recommendation System</div>
     <div class="hero-subtitle">
         Build a job-winning resume, get AI screening feedback, and find jobs
         that actually match your skills — all free, no accounts, no API keys.
